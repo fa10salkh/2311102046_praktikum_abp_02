@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="id" class="m-0 p-0 w-100 h-100">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramadhan Kareem 1447H</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cinzel:wght@700;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body class="m-0 p-0 overflow-hidden" style="width:100vw;height:100vh;">
+
+    <!-- Background FULL layar -->
+    
+    <img src="ramadhan.png"
+         alt=""
+         class="position-fixed top-0 start-0 w-100 h-100"
+         style="z-index:0; object-fit:cover; object-position:center;">
+
+    <!-- Konten tengah -->
+    
+    <div class="position-fixed top-0 start-0 w-100 h-100 d-flex flex-column align-items-center justify-content-center text-center pt-5 mt-5"
+         style="z-index:1;">
+
+        <!-- Teks Ramadhan -->
+        
+        <h1 class="fw-bold text-warning mb-0 lh-1"
+            style="font-family:'Great Vibes',cursive; font-size:clamp(4rem,10vw,9rem); text-shadow:3px 3px 12px rgba(0,0,0,0.6);">
+            Ramadhan
+        </h1>
+
+        <!-- Teks Kareem -->
+        
+        <h2 class="fw-bold text-white text-uppercase mb-5"
+            style="font-family:'Cinzel',serif; font-size:clamp(2rem,6vw,5rem); letter-spacing:0.3em; text-shadow:3px 3px 12px rgba(0,0,0,0.6);">
+            Kareem
+        </h2>
+
+        <!-- Tombol THR -->
+        
+        <button type="button"
+                class="btn btn-warning btn-lg rounded-pill px-5 py-3 fw-bold shadow-lg"
+                style="font-family:'Cinzel',serif; font-size:clamp(1rem,2vw,1.3rem); letter-spacing:0.1em;"
+                data-bs-toggle="modal"
+                data-bs-target="#thrModal">
+            <i class="fas fa-gift me-2"></i> Selamat Anda Mendapatkan THR
+        </button>
+
+    </div>
+
+
+    <!--  modal thr -->
+    <div class="modal fade" id="thrModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark border border-warning rounded-4 text-white">
+
+                
+                <div id="tahap1">
+                    <!-- Header -->
+                    <div class="modal-header bg-warning text-dark border-0 justify-content-center rounded-top-4 py-3">
+                        <h5 class="modal-title fw-bold fs-5 text-uppercase"
+                            style="font-family:'Cinzel',serif; letter-spacing:0.1em;">
+                            🎁 Ada Kejutan Untuk Anda!
+                        </h5>
+                    </div>
+
+                    <!-- Body -->
+                    <div class="modal-body text-center px-4 py-5">
+
+                        <!-- Ikon amplop tema Ramadhan -->
+                        <div class="d-inline-flex align-items-center justify-content-center bg-warning rounded-4 shadow-lg mb-2 p-4">
+                            <i class="fas fa-envelope text-dark" style="font-size:4rem;"></i>
+                        </div>
+                        <div class="mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-mosque text-warning mx-2"></i>
+                            <i class="fas fa-star text-warning"></i>
+                        </div>
+
+                        <h4 class="text-warning fw-bold mb-2"
+                            style="font-family:'Cinzel',serif;">
+                            Amplop THR Anda Sudah Siap!
+                        </h4>
+                        <p class="text-white-50 mb-4"
+                           style="font-family:'Amiri',serif; font-size:1.1rem;">
+                            Klik tombol di bawah untuk membuka amplop dan lihat apa yang ada di dalamnya...
+                        </p>
+
+                        <!-- Progress bar Bootstrap -->
+                        <div class="progress mb-4 bg-secondary" style="height:8px;">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning w-100"></div>
+                        </div>
+
+                        <button type="button"
+                                id="btnBukaAmplop"
+                                class="btn btn-warning btn-lg rounded-pill px-5 py-3 fw-bold shadow-lg"
+                                style="font-family:'Cinzel',serif; letter-spacing:0.1em;">
+                            <i class="fas fa-envelope-open me-2"></i> Buka Amplop!
+                        </button>
+
+                    </div>
+                </div>
+
+                
+                <div id="tahap2" class="d-none">
+                    <!-- Header -->
+                    <div class="modal-header bg-warning text-dark border-0 justify-content-center rounded-top-4 py-3">
+                        <h5 class="modal-title fw-bold fs-4 text-uppercase"
+                            style="font-family:'Cinzel',serif; letter-spacing:0.1em;">
+                            🎉 ALHAMDULILLAH! 🎉
+                        </h5>
+                    </div>
+
+                    <!-- Body -->
+                    <div class="modal-body text-center px-4 py-4">
+
+                        <!-- Emoji muncul bertahap -->
+                        <div id="emojiReveal" class="fs-1 mb-3"></div>
+
+                        <!-- Selamat -->
+                        <h3 id="txtSelamat"
+                            class="fw-bold text-warning mb-1 d-none"
+                            style="font-family:'Great Vibes',cursive; font-size:3.5rem;">
+                            Selamat!
+                        </h3>
+
+                        <h5 id="txtSubtitle"
+                            class="text-white mb-3 d-none"
+                            style="font-family:'Amiri',serif; font-size:1.2rem;">
+                            Anda Mendapatkan
+                            <span class="text-warning fw-bold">THR Spesial</span>
+                            Hari Ini!
+                        </h5>
+
+                        <hr class="border-warning opacity-25">
+
+                        <!-- Card amplop isi + gambar uang -->
+                        <div id="cardAmplop" class="card bg-black border border-warning rounded-3 mb-3 d-none">
+                            <div class="card-body py-3">
+                                <p class="text-white-50 small mb-2">
+                                    <i class="fas fa-envelope-open-text me-1"></i>
+                                    Isi Amplop Anda:
+                                </p>
+                                
+                                <img src="100rb.jpg"
+                                     alt="Uang 100 Ribu"
+                                     class="img-fluid rounded-3 shadow mb-3"
+                                     style="max-height:160px; object-fit:contain;">
+                                <p class="fw-bold text-warning fs-5 mb-1"
+                                   style="font-family:'Amiri',serif;">
+                                    Uang Tunai Rp 100.000 🌟
+                                </p>
+                                <p class="text-white-50 small mb-0"
+                                   style="font-family:'Amiri',serif;">
+                                    Semoga menjadi berkah dan manfaat di bulan Ramadhan yang mulia ini. Gunakan dengan sebaik-baiknya! 🤲
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- 3 kolom info -->
+                        <div id="infoKolom" class="row g-2 mb-3 d-none">
+                            <div class="col-4">
+                                <div class="card bg-black border border-secondary rounded-3 text-center py-2">
+                                    <div class="fs-4">🕌</div>
+                                    <small class="text-secondary"
+                                           style="font-family:'Cinzel',serif;">Ibadah</small>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="card bg-black border border-secondary rounded-3 text-center py-2">
+                                    <div class="fs-4">🌙</div>
+                                    <small class="text-secondary"
+                                           style="font-family:'Cinzel',serif;">Berkah</small>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="card bg-black border border-secondary rounded-3 text-center py-2">
+                                    <div class="fs-4">🤲</div>
+                                    <small class="text-secondary"
+                                           style="font-family:'Cinzel',serif;">Doa</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Alert -->
+                        <div id="alertNote" class="alert alert-warning rounded-3 py-2 mb-0 d-none">
+                            <small class="fst-italic"
+                                   style="font-family:'Amiri',serif; font-size:1rem;">
+                                Semoga THR dalam bentuk 'fisik' juga segera cair ya! Aamiin 🤲
+                            </small>
+                        </div>
+
+                    </div>
+
+                    <!-- Footer -->
+                    <div class="modal-footer border-0 justify-content-center pb-4">
+                        <button type="button"
+                                id="btnAamiin"
+                                class="btn btn-warning btn-lg rounded-pill px-5 fw-bold shadow d-none"
+                                style="font-family:'Cinzel',serif; letter-spacing:0.1em;"
+                                data-bs-dismiss="modal">
+                            <i class="fas fa-check-circle me-2"></i>
+                            Aamiin
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script>
+        
+        document.getElementById('thrModal').addEventListener('show.bs.modal', () => {
+            document.getElementById('tahap1').classList.remove('d-none');
+            document.getElementById('tahap2').classList.add('d-none');
+            document.getElementById('emojiReveal').textContent = '';
+            ['txtSelamat','txtSubtitle','cardAmplop','infoKolom','alertNote','btnAamiin']
+                .forEach(id => document.getElementById(id).classList.add('d-none'));
+        });
+
+        // Klik Buka Amplop 
+        document.getElementById('btnBukaAmplop').addEventListener('click', () => {
+            document.getElementById('tahap1').classList.add('d-none');
+            document.getElementById('tahap2').classList.remove('d-none');
+
+            
+            confetti({ particleCount: 200, spread: 120, origin: { y: 0.5 },
+                colors: ['#ffc107','#fff','#28a745','#ffd700'], zIndex: 9999 });
+
+            // Emoji muncul satu per satu
+            const emojis = ['💰','✨','🕌'];
+            let i = 0;
+            const emojiEl = document.getElementById('emojiReveal');
+            const emojiTimer = setInterval(() => {
+                emojiEl.textContent += emojis[i] + ' ';
+                i++;
+                if (i >= emojis.length) clearInterval(emojiTimer);
+            }, 300);
+
+            
+            [
+                { id: 'txtSelamat',  delay: 1200 },
+                { id: 'txtSubtitle', delay: 1800 },
+                { id: 'cardAmplop',  delay: 2400 },
+                { id: 'infoKolom',   delay: 3000 },
+                { id: 'alertNote',   delay: 3600 },
+                { id: 'btnAamiin',   delay: 4200 },
+            ].forEach(({ id, delay }) => {
+                setTimeout(() => document.getElementById(id).classList.remove('d-none'), delay);
+            });
+
+            
+            setTimeout(() => {
+                confetti({ particleCount: 120, spread: 80, origin: { y: 0.6 },
+                    colors: ['#ffc107','#fff','#ff6b6b','#ffd700'], zIndex: 9999 });
+            }, 4500);
+        });
+    </script>
+
+</body>
+</html>
